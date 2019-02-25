@@ -1,0 +1,30 @@
+body {
+  background: #cc95c0; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
+
+.logo {
+  width: 40%;
+}
+
+.media {
+  width: 90%;
+}
+.col {
+ 
+  border: solid 1px black;
+}
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
