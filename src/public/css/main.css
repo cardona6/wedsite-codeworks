@@ -1,10 +1,28 @@
 body {
-  background: #cc95c0; /* fallback for old browsers */
+  background: #fcadeb; /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #cc95c0, #dbd4b4, #7aa1d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */}
 
+img {
+  width: 100%;
+}
+
+/* section */
+.section{
+  padding: 2rem 0;
+}
+
+.section-head{
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.section h3{
+  font-size: 2rem;
+}
+
 .logo {
-  width: 40%;
+  width: 16%;
 }
 
 .media {
@@ -14,17 +32,70 @@ body {
  
   border: solid 1px black;
 }
+
 .container {
   position: relative;
   font-family: Arial;
 }
 
-.text-block {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  background-color: black;
-  color: white;
-  padding-left: 20px;
-  padding-right: 20px;
+/* main */
+#main {
+ margin: 0;
+ padding: 0;
+ background: url("/img/Collegepic.jpg") no-repeat center/cover;
+ width: 100%;
+ height: 100vh;
+ position: relative;
+ overflow-y: hidden;
 }
+
+#main {
+  margin-top: 2ch;
+}
+
+#main h1{
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#main h2{
+  font-size: 2rem;
+
+}
+
+/*Footer */
+footer .footer-cols {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 2rem;
+  text-align: left;
+  font-style: 14px;
+}
+footer .footer-cols ul {
+  list-style: none;
+}
+
+footer .footer-cols ul li:first-child{
+  font-size: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: #cc95c0 solid 1px;
+  margin-bottom: 1rem;
+}
+
+footer .footer-bottom {
+  background: #7aa1d2;
+  padding: 5rem;
+}
+
+/* Utility classes */
+.container{
+  max-width: 1180px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+ .lead{
+   font-size: 1.3rem;
+ }
