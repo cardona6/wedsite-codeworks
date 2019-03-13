@@ -63,30 +63,27 @@ img {
 
 }
 
+
+
+/*About */
+#about {
+  margin: 0;
+  padding: 0;
+  background: url("/img/people-woman-coffee-meeting.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+ }
+ #about h1{
+  color: aliceblue;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+ 
+
+
 /*Footer */
-footer .footer-cols {
-  display: grid;
-  grid-gap: 20px;
-  grid-template-columns: repeat(4, 1fr);
-  padding: 2rem;
-  text-align: left;
-  font-style: 14px;
-}
-footer .footer-cols ul {
-  list-style: none;
-}
-
-footer .footer-cols ul li:first-child{
-  font-size: 1.2rem;
-  padding-bottom: 0.5rem;
-  border-bottom: #cc95c0 solid 1px;
-  margin-bottom: 1rem;
-}
-
-footer .footer-bottom {
-  background: #7aa1d2;
-  padding: 5rem;
-}
 
 /* Utility classes */
 .container{

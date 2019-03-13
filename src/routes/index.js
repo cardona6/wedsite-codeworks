@@ -9,4 +9,7 @@ router.get('/media', (req, res) => {
   res.render('media');
 });
 
+router.get('/about', (req, res) => {
+  res.render('about');
+});
 module.exports = router;
