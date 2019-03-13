@@ -12,4 +12,8 @@ router.get('/media', (req, res) => {
 router.get('/about', (req, res) => {
   res.render('about');
 });
+
+router.get('/general-information', (req, res) => {
+  res.render('general-information');
+});
 module.exports = router;
