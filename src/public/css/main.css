@@ -38,32 +38,22 @@ img {
   font-family: Arial;
 }
 
-/* main */
-#main {
- margin: 0;
- padding: 0;
- background: url("/img/Collegepic.jpg") no-repeat center/cover;
- width: 100%;
- height: 100vh;
- position: relative;
- overflow-y: hidden;
+/* Home*/
+
+#carouselExampleIndicators h3{
+  font-size: 6rem;
 }
 
-#main {
-  margin-top: 2ch;
-}
-
-#main h1{
+#carouselExampleIndicators h2{
   font-size: 4rem;
-  margin-bottom: 0;
 }
 
-#main h2{
-  font-size: 2rem;
-
+#carouselExampleIndicators p{
+  font-size: 3rem;
 }
-
-
+.section-head {
+  font-size: 6rem;
+}
 
 /*About */
 #about {
@@ -96,6 +86,105 @@ img {
   font-size: 4rem;
   margin-bottom: 0;
 }
+
+ /*information-collegue */
+ #information-collegue {
+  margin: 0;
+  padding: 0;
+  background: url("/img/pexels-photo-1454360.jpeg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+ }
+ #information-collegue h1{
+  color: aliceblue;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+/*student-welcome */
+#student-welcome {
+  margin: 0;
+  padding: 0;
+  background: url("/img/pexels-photo-1462631.jpeg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+ }
+ #student-welcome h1{
+  color: aliceblue;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+/*ours-performarce*/
+#our-performarce {
+  margin: 0;
+  padding: 0;
+  background: url("/img/ours-permormance.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+ }
+ #our-performarce h1{
+  color: aliceblue;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+/*shors-courses*/
+#shors-courses {
+  margin: 0;
+  padding: 0;
+  background: url("/img/all-courses.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+ }
+ #shors-courses h1{
+  color: aliceblue;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+/*student-charter*/
+#student-charter {
+  margin: 0;
+  padding: 0;
+  background: url("/img/student-charter.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+ }
+ #student-charter h1{
+  color: aliceblue;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+
+
+/* how-aply */
+#how-aply {
+  margin: 0;
+  padding: 0;
+  background: url("/img/aply.jpg") no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+ }
+ #how-aply h3{
+  color: aliceblue;
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
 
 
 /*Footer */
