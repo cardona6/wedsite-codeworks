@@ -21,8 +21,8 @@ router.get('/how-aply', (req, res) => {
   res.render('how-aply');
 });
 
-router.get('/information-collegue', (req, res) => {
-  res.render('information-collegue');
+router.get('/contact', (req, res) => {
+  res.render('contact');
 });
 
 router.get('/our-performarce', (req, res) => {
