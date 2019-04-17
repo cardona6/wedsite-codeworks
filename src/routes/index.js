@@ -29,12 +29,20 @@ router.get('/our-performarce', (req, res) => {
   res.render('our-performarce');
 });
 
-router.get('/shors-courses', (req, res) => {
-  res.render('shors-courses');
-});
-
 router.get('/student-charter', (req, res) => {
   res.render('student-charter');
+});
+
+router.get('/College-certification', (req, res) => {
+  res.render('College-certification');
+});
+
+router.get('/ecd', (req, res) => {
+  res.render('ecd');
+});
+
+router.get('/sqa', (req, res) => {
+  res.render('sqa');
 });
 
 router.get('/student-welcome', (req, res) => {

@@ -13,19 +13,22 @@
       <h3>Edit Persona Details</h3>
     </div>
     <div class="card-body">
-      <form action="/applications/application-note/{{application._id}}?_method=PUT" method="POST">
+      <form action="/applications/edit/{{application._id}}"?_method=PUT">
         <input type="hidden" name="_method" value="PUT">
         <div class="form-group">
           <input type="text" name="title" class="form-control" value="{{application.title}}"/>
         </div>
          <div class="form-group">
-          <input type="text" name="name" class="form-control" value="{{application.name}}"/>
+          <input type="text" name="fullName" class="form-control" value="{{application.fullName}}"/>
         </div>
         <div class="form-group">
           <input type="text" name="gender" class="form-control" value="{{application.gender}}"/>
         </div>
          <div class="form-group">
           <input type="text" name="date of Birth" class="form-control" value="{{application.date}}"/>
+        </div>
+         <div class="form-group">
+          <input type="text" name="status" class="form-control" value="{{application.status}}"/>
         </div>
         <div class="form-group">
           <textarea name="description" class="form-control">{{application.description}}</textarea>

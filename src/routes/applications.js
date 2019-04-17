@@ -13,10 +13,23 @@ router.get('/applications/add', isAuthenticated, (req, res) => {
 });
 
 router.post('/applications/new-application', isAuthenticated, async (req, res) => {
-  const { title, description } = req.body;
+  const { title,fullName, status,gender,date,description } = req.body;
+  console.log( req.body);
   const errors = [];
   if (!title) {
     errors.push({text: 'Please Write a Title.'});
+  }
+  if (!status) {
+    errors.push({text: 'Please Write a status.'});
+  }
+  if (!fullName) {
+    errors.push({text: 'Please Write a fullName.'});
+  }
+  if (!gender) {
+    errors.push({text: 'Please Write a gender.'});
+  }
+  if (!date) {
+    errors.push({text: 'Please Write a date.'});
   }
   if (!description) {
     errors.push({text: 'Please Write a Description'});
@@ -25,10 +38,16 @@ router.post('/applications/new-application', isAuthenticated, async (req, res) =
     res.render('applications/new-application', {
       errors,
       title,
+      fullName,
+      gender,
+      date,
+      status,
       description
     });
   } else {
-    const newApplication = new Application({title, description});
+    const databaseDate = new Date(date)
+
+    const newApplication = new Application({title,gender,fullName, databaseDate,status,description});
     newApplication.user = req.user.id;
     await newApplication.save();
     req.flash('success_msg', 'application Added Successfully');
@@ -52,15 +71,15 @@ router.get('/applications/edit/:id', isAuthenticated, async (req, res) => {
   res.render('applications/edit-application', { application });
 });
 
-router.put('/applications/edit-application/:id', isAuthenticated, async (req, res) => {
-  const { title, description } = req.body;
-  await Application.findByIdAndUpdate(req.params.id, {title, description});
+router.put('/applications/edit/:id', isAuthenticated, async (req, res) => {
+  const { title,fullName,gender,date,status, description } = req.body;
+  await Application.findByIdAndUpdate(req.params.id, {title,fullName,gender,date,status, description});
   req.flash('success_msg', 'application Updated Successfully');
   res.redirect('/applications');
 });
 
-// Delete Notes
-router.delete('/applications/delete/:id', isAuthenticated, async (req, res) => {
+// Delete 
+router.delete('/applications/:id', isAuthenticated, async (req, res) => {
   await Application.findByIdAndDelete(req.params.id);
   req.flash('success_msg', 'application Deleted Successfully');
   res.redirect('/applications');

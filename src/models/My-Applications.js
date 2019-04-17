@@ -6,13 +6,27 @@ const ApplicationSchema = new Schema({
     type: String,
     required: true
   },
+  fullName: {
+    type: String,
+    required: true
+  },
   description: {
     type: String,
     required: true
   },
   date: {
     type: Date,
-    default: Date.now
+    default: Date.now,
+    required: true
+  },
+  gender: {
+    type: String,
+    required: true
+  },
+  status: {
+    type: String,
+    default: "SUBMITTED",
+    required: true
   },
   user: {
     type: String,
