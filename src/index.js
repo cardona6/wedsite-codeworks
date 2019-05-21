@@ -46,8 +46,8 @@ app.use((req, res, next) => {
 // routes
 app.use(require('./routes'));
 app.use(require('./routes/users'));
-app.use(require('./routes/notes'));
-app.use(require('./routes/applications'));
+app.use(require('./routes/student-details'));
+app.use(require('./routes/achievements'));
 
 // static files
 app.use(express.static(path.join(__dirname, 'public')));

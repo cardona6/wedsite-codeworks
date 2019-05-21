@@ -10,7 +10,7 @@ router.get('/users/signup', (req, res) => {
 
 router.post('/users/signup', async (req, res) => {
   let errors = [];
-  const { name, email, password, confirm_password } = req.body;
+  const { name, email,date, password, confirm_password } = req.body;
   if(password != confirm_password) {
     errors.push({text: 'Passwords do not match.'});
   }
@@ -18,7 +18,7 @@ router.post('/users/signup', async (req, res) => {
     errors.push({text: 'Passwords must be at least 4 characters.'})
   }
   if(errors.length > 0){
-    res.render('users/signup', {errors, name, email, password, confirm_password});
+    res.render('users/signup', {errors, name, email, date, password, confirm_password});
   } else {
     // Look for email coincidence
     const emailUser = await User.findOne({email: email});
@@ -27,7 +27,7 @@ router.post('/users/signup', async (req, res) => {
       res.redirect('/users/signup');
     } else {
       // Saving a New User
-      const newUser = new User({name, email, password});
+      const newUser = new User({name, email,date, password});
       newUser.password = await newUser.encryptPassword(password);
       await newUser.save();
       req.flash('success_msg', 'You are registered.');
@@ -41,7 +41,7 @@ router.get('/users/signin', (req, res) => {
 });
 
 router.post('/users/signin', passport.authenticate('local', {
-  successRedirect: '/notes',
+  successRedirect: '/student-details',
   failureRedirect: '/users/signin',
   failureFlash: true
 }));
@@ -52,4 +52,9 @@ router.get('/users/logout', (req, res) => {
   res.redirect('/users/signin');
 });
 
+
+
+
 module.exports = router;
+
+

@@ -5,6 +5,22 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
+router.get('/student-details', (req, res) => {
+  res.render('student-details');
+});
+
+router.get('/add-achievements', (req, res) => {
+  res.render('add-achievements');
+});
+
+router.get('/new-achievements', (req, res) => {
+  res.render('new-achievements');
+});
+
+router.get('/edit-details', (req, res) => {
+  res.render('edit-details');
+});
+
 router.get('/media', (req, res) => {
   res.render('media');
 });

@@ -1,0 +1,44 @@
+<section id="details">
+  <hr>
+  </div>
+  <section class="card">
+    </div>
+    <hr>
+    <div class="card" style="width: 20rem;">
+      <img class="card-img-top" src="/img/Sqalogo.jpg" alt="Card image cap">
+      <div class="card-block">
+        {{#each user}}
+        <p>{{ name }}</p>
+        <p>{{ email }}</p>
+        <p>{{ date }}</p>
+        {{else}}
+        <h4> {{user.name}} </h4>
+        <h4> {{user.email}} </h4>
+        <h4> {{user.date}} </h4>
+        {{/each}}
+      </div>
+    </div>
+    <hr>
+    <hr>
+    <div class="card-block">
+      <h3 class="card-title">User details</h3>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="/edit-details {{_id}}" class="btn btn-primary">Edit Student-details</a>
+    </div>
+
+    <div class="col-sm-6">
+      <section class="card">
+    </div>
+    <hr>
+    <div class="card" style="width: 20rem;">
+      <h3 class="card-title">My Achievemets!</h3>
+      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <a href="/new-achievements" class="btn btn-primary">add-achievements</a>
+      <div class="card-block">
+        {{#each achievements}}
+        <p>{{ title }}</p>
+        <p>{{ description }}</p>
+        {{/each}}
+      </div>
+    </div>
+    </section>

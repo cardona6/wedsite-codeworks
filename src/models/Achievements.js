@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const NoteSchema = new Schema({
+const AchievementsSchema = new Schema({
+  id: {
+    type:String,
+    required:true
+  },
   title: {
     type: String,
     required: true
@@ -11,13 +15,8 @@ const NoteSchema = new Schema({
     required: true
   },
   date: {
-    type: Date,
-    default: Date.now
-  },
-  user: {
-    type: String,
-    required: true
-  }
+    type:Date,
+    default:Date.now}
 });
 
-module.exports = mongoose.model('Note', NoteSchema);
+module.exports = mongoose.model('Achievements', AchievementsSchema);

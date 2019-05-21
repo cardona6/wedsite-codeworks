@@ -1,0 +1,36 @@
+{{#each error}}
+<div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+</div>
+{{/each}}
+
+<div class=" card">
+    <div class="card-header">
+        <h3> New Achievements </h3>
+    </div>
+    <div class="card-body">
+        <form action="/new-achievements" method="POST">
+          <select>
+              <option value="javacript">#</option>
+              <option value="hervin">#</option>
+              <option value="garcia">#</option>
+              <option value="cardona">#</option>
+          </select>
+          <hr>
+            <div class="form-group">
+                <input type="text" name="title" class="form-control" placeholder="title" autofocus>
+            </div>
+            <div class="form-group">
+                <textarea name="description" class="form-control" placeholder="Description"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">Save</button>
+            </div>
+            <hr>
+        </form>
+    </div>
+</div>
