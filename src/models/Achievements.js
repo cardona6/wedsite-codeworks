@@ -2,10 +2,6 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const AchievementsSchema = new Schema({
-  id: {
-    type:String,
-    required:true
-  },
   title: {
     type: String,
     required: true
@@ -14,9 +10,10 @@ const AchievementsSchema = new Schema({
     type: String,
     required: true
   },
-  date: {
-    type:Date,
-    default:Date.now}
+  status: {
+    type:Boolean,
+    default:false
+  }
 });
 
 module.exports = mongoose.model('Achievements', AchievementsSchema);

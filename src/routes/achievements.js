@@ -8,14 +8,14 @@ const Achievements = require('../models/Achievements');
 // const { isAuthenticated } = require('../helpers/auth');
 
 // My Achievements
-router.get('/new-achievements', (req, res) => {
-  res.render('/new-achievements');
+router.get('/archievements', (req, res) => {
+  res.render('/student-details');
 });
 
 
 
 
-router.post('/new-achievements', async (req,res) => {
+router.post('/student-details', async (req,res) => {
   const {title,description} = req.body;
   const errors = [];
   if (!title){
@@ -33,15 +33,16 @@ router.post('/new-achievements', async (req,res) => {
   }else {
    const newAchievements = new Achievements({title,description});
    await newAchievements.save();
-   res.send('ok')
+   req.flash('success_msg', 'You are create New Achievement.');
+   res.redirect('/student-details')
   }
-})
+});
 
 
-// router.get('/student-details', async (req, res) => {
-//   const achievements = await Achievements.find();
-//   res.render('/student-details',{achievements});
-// });
+router.get('/achievements', async (req, res) => {
+  const achievemens = await Achievements.find();
+  res.render('/student-details',{achievemens});
+});
 
 
 // Edit Achievements

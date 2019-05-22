@@ -19,26 +19,74 @@
       </div>
     </div>
     <hr>
-    <hr>
-    <div class="card-block">
+   <div class="col-md-3">
       <h3 class="card-title">User details</h3>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
       <a href="/edit-details {{_id}}" class="btn btn-primary">Edit Student-details</a>
     </div>
-
-    <div class="col-sm-6">
-      <section class="card">
-    </div>
     <hr>
-    <div class="card" style="width: 20rem;">
-      <h3 class="card-title">My Achievemets!</h3>
+    <hr>
+     <a href="#" class="btn btn-primary"></a>
+     <hr>
+
+ <h1 class="card-title">My Achievemets!</h1>
       <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-      <a href="/new-achievements" class="btn btn-primary">add-achievements</a>
-      <div class="card-block">
-        {{#each achievements}}
-        <p>{{ title }}</p>
-        <p>{{ description }}</p>
-        {{/each}}
+
+  {{#each errors}}
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    {{text}}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {{/each}}
+  <pre> \{{achievemens}}</pre>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-body">
+            <h2>Achievements</h2>
+            <form action="/student-details" method="POST">
+              <div class="form-group">
+                <input type="text" name="title" class="form-control" placeholder="Title">
+              </div>
+              <div class="form-group">
+                <input type="text" name="description" class="form-control" placeholder="Description">
+              </div>
+              <div class="form-group">
+                <button class="btn btn-primary btn-block" type="submit">add-achievements</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
+      <div class="col-md-7">
+        <table class="table table-bordered table-hover">
+          <thead>
+            <tr>
+              <th>No</th>
+              <th>Title</th>
+              <th>Description</th>
+              <th>Operation</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{!--
+            <% for(var i=0; i < achievemens.length; i++ )}}
+                    <td></achievemens.length>
+                     <td>{{i + 1 }}</td> 
+                     <td>{{achievemens[i].title}}</td>
+                     <td>{{achievemens[i].description}}</td>
+                     <td>
+                         <a href="#" class="btn btn-dark">done</a> 
+                          <a href="#" class="btn btn-dang">delete</a> 
+                           <a href="#" class="btn btn-danger">edit</a> 
+                     </td>
+                    </tr> --}}
+                </tbody>
+            </table>
+        </div>
     </div>
-    </section>
+</div>
+      </section>

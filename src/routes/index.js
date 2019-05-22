@@ -9,8 +9,8 @@ router.get('/student-details', (req, res) => {
   res.render('student-details');
 });
 
-router.get('/add-achievements', (req, res) => {
-  res.render('add-achievements');
+router.get('/all-achievements', (req, res) => {
+  res.render('all-achievements');
 });
 
 router.get('/new-achievements', (req, res) => {
