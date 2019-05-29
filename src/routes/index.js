@@ -5,9 +5,7 @@ router.get('/', (req, res) => {
   res.render('index');
 });
 
-router.get('/student-details', (req, res) => {
-  res.render('student-details');
-});
+
 
 router.get('/all-achievements', (req, res) => {
   res.render('all-achievements');

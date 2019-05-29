@@ -27,9 +27,9 @@
     <hr>
      <a href="#" class="btn btn-primary"></a>
      <hr>
-
+<img class="mx-auto d-block logo m-2" src="/img/achievements.jpg">
  <h1 class="card-title">My Achievemets!</h1>
-      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+      <p class="card-text">Glasglow Kelvin College  </p>
 
   {{#each errors}}
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
@@ -39,7 +39,6 @@
     </button>
   </div>
   {{/each}}
-  <pre> \{{achievemens}}</pre>
 
   <div class="container">
     <div class="row">
@@ -55,35 +54,35 @@
                 <input type="text" name="description" class="form-control" placeholder="Description">
               </div>
               <div class="form-group">
-                <button class="btn btn-primary btn-block" type="submit">add-achievements</button>
+                <button class="btn btn-primary btn-block" type="submit">Add Achievements</button>
               </div>
             </form>
           </div>
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-9">
         <table class="table table-bordered table-hover">
           <thead>
             <tr>
-              <th>No</th>
               <th>Title</th>
               <th>Description</th>
-              <th>Operation</th>
+              <th>Status</th>
             </tr>
           </thead>
+           {{#each achi }}
           <tbody>
-            {{!--
-            <% for(var i=0; i < achievemens.length; i++ )}}
-                    <td></achievemens.length>
-                     <td>{{i + 1 }}</td> 
-                     <td>{{achievemens[i].title}}</td>
-                     <td>{{achievemens[i].description}}</td>
+            <tr> 
+                     <td>{{title}}</td> 
+                     <td>{{description}}</td>
+                     <td>{{status}}</td>
                      <td>
-                         <a href="#" class="btn btn-dark">done</a> 
-                          <a href="#" class="btn btn-dang">delete</a> 
-                           <a href="#" class="btn btn-danger">edit</a> 
+                          <form action="/archievemen/{{id}}?_method=DELETE" method="POST">
+                          <input type="hidden" name="_method" value="DELETE">
+                          <button class="btn btn-danger btn-block bth-sm" type="submit">DELETE</button>
+                          </form> 
                      </td>
-                    </tr> --}}
+                    {{/each}}
+                    </tr> 
                 </tbody>
             </table>
         </div>
