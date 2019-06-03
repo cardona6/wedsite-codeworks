@@ -83,11 +83,19 @@ img {
  }
  
 #All-courses h1 {
- 
  color: aliceblue;
  font-size: 4rem;
  margin-bottom: 0;
 }
+
+#All-courses .table {
+flex: none;
+}
+
+#accordion .collapse .dropdown-item {
+  flex: none;
+  }
+  
 .medio-title{
   font-size: 3rem;
   text-align: left;
@@ -100,7 +108,6 @@ img {
 .table td {
   font-size: 1rem;
 }
-
 
 
  
@@ -283,3 +290,22 @@ position: relative;
  .lead{
    font-size: 1.3rem;
  }
+
+
+/* Media Queries */
+
+ @media screen and (max-width: 900px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 500px) {
+  .row, .navbar {   
+    flex-direction: column;
+  }
+}
