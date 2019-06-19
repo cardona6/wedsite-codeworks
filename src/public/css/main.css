@@ -295,11 +295,13 @@ position: relative;
 /* Media Queries */
 
  @media screen and (max-width: 1024px) {
-  .table{  
-    background-color: #4714a7; 
+  .table-responsive{  
+    overflow-y: hidden;
     font-family: serif;
     word-spacing: 0px;
-    margin: 5px top;
+    margin: 20px top;
+    
+   
     
   }
   .dropdown-item{
@@ -309,10 +311,10 @@ position: relative;
 
 }
 @media screen and (max-width: 780px) {
-  .table{  
+  .table-responsive{  
+    overflow-y: hidden;
     background-color: aqua;
     font-family: serif;
-    word-spacing: 0.5px;
     margin: 5px top;
    
 
@@ -323,7 +325,7 @@ position: relative;
   }
 }
 @media screen and (max-width: 480px) {
-  .table {  
+  .table-responsive {  
     font-family: serif;
     word-spacing: 0px;
     margin: 5px top;

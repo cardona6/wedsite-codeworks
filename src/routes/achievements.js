@@ -10,7 +10,6 @@ router.get('/student-details', async (req, res) => {
   res.render('student-details', {achi});
 });
 
-
 router.post('/student-details', async (req,res) => {
   const errors = [];
   const { title, description} = req.body;
