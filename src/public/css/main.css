@@ -312,6 +312,7 @@ position: relative;
 }
 @media screen and (max-width: 780px) {
   .table-responsive{  
+    width: 100%;
     overflow-y: hidden;
     background-color: aqua;
     font-family: serif;
@@ -325,12 +326,12 @@ position: relative;
   }
 }
 @media screen and (max-width: 480px) {
-  .table-responsive {  
-    font-family: serif;
-    word-spacing: 0px;
-    margin: 5px top;
+  .table {  
+    width: 150%;
+    padding: 5px;
+    margin: 10px top;
   }
   .dropdown-item{
-    width: 100%;
+    width: 50%;
   }
 }
