@@ -311,24 +311,36 @@ position: relative;
 
 }
 @media screen and (max-width: 780px) {
-  .table{  
-    background-color: aqua;
-    font-size: 1px;
-    width: 95%;
-   
+  .table{ 
+    background: #dbd4b4;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+    border: 0.5px solid #ddd;
+  }
+  th, td {
+    text-align: center;
+    padding: 10px;
+  }
   }
   .dropdown-item{
-    font-size: 15px;
+    font-size: 10px;
     width: 25%;
   }
 }
 @media screen and (max-width: 480px) {
   .table {  
-    width: 150%;
-    padding: 5px;
-    margin: 10px top;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 50%;
+    border: 1px solid #ddd;
+  }
+  th, td {
+    text-align: center;
+    padding: 10px;
   }
   .dropdown-item{
+    font-size: 5px;
     width: 50%;
   }
 }
